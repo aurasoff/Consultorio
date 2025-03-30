@@ -1,4 +1,11 @@
 package org.uniquindio.edu.co.poo.model;
 
-public record Paciente() {
+import java.time.LocalDate;
+
+public record Paciente(int numeroHistoC,
+        String nombre,
+        int edad,
+        String telefono,
+        LocalDate fechaUltimaConsulta,
+        int cantTratamientosRealzdos) {
 }
