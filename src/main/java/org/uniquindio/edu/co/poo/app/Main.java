@@ -16,12 +16,12 @@ public class Main {
         List<Paciente> listaPacientes = new ArrayList<>();
         List<Odontologo> listaOdontologos = new ArrayList<>();
 
-        // Agregar pacientes pre-registrados
+
         listaPacientes.add(new Paciente(1, "Carlos Pérez", 45, "3124567890", LocalDate.of(2024, 5, 12), 6));
         listaPacientes.add(new Paciente(2, "Ana Gómez", 30, "3109876543", LocalDate.of(2024, 3, 8), 4));
         listaPacientes.add(new Paciente(3, "Mariana Ramírez", 40, "312334455", LocalDate.of(2025, 2, 16), 8));
 
-        // Permitir ingreso de nuevos pacientes
+
         boolean agregarPaciente;
         do {
             int numeroHistoria = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número de historia clínica del paciente:"));
@@ -61,17 +61,16 @@ public class Main {
             agregarOdontologo = JOptionPane.showConfirmDialog(null, "¿Desea agregar otro odontólogo?", "Confirmación", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
         } while (agregarOdontologo);
 
-        // Mostrar odontólogos ingresados
+
         StringBuilder odontologosInfo = new StringBuilder("Odontólogos disponibles:\n");
         for (Odontologo odontologo : listaOdontologos) {
-            odontologosInfo.append(" ").append(odontologo.getNombre()).append(" ID: ")
-                    .append(odontologo.getId()).append("  Nombre: ")
+            odontologosInfo.append(" ").append(odontologo.getNombre()).append(" ID: ").append(odontologo.getId()).append("  Nombre: ")
                     .append(odontologo.getNombre()).append(" Especialidad: ")
                     .append(odontologo.getEspecialidad()).append("\n");
         }
         JOptionPane.showMessageDialog(null, odontologosInfo.toString());
 
-        // Mostrar pacientes con más de 5 tratamientos
+        
         StringBuilder pacientesGratis = new StringBuilder("Pacientes con más de 5 tratamientos:\n");
         boolean hayPacientesGratis = false;
 

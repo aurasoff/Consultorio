@@ -7,7 +7,6 @@ public class Consultorio {
     private List<Paciente> listaPacientes;
     private String direccion;
 
-    // Constructor
     public Consultorio(String nombre, List<Paciente> listaPacientes, String direccion) {
         this.nombre = nombre;
         this.listaPacientes = listaPacientes;
